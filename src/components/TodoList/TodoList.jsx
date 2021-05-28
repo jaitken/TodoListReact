@@ -33,9 +33,11 @@ class TodoList extends React.Component{
                     <div className="item">
                         <h2>{item.title}</h2>
                         <div>
+                            <ul>
                             {item.thingsToDo.map((task)=>(
-                                <h5>{task}</h5>
+                                <li><h5>{task}</h5></li>
                             ))}
+                            </ul>
                         </div>
                         <button onClick={this.deleteItem.bind(this, item.id)} className='deleteButton'>Delete</button>
                     </div>
