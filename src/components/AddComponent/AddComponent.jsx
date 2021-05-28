@@ -37,7 +37,6 @@ class AddComponent extends React.Component{
       }
 
     async refreshItems(){
-        console.log("refresh")
         await this.props.functionRefresh();
     }
     render(){

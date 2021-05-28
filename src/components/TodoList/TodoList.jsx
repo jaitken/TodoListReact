@@ -19,7 +19,6 @@ class TodoList extends React.Component{
         this.reverseOrder = this.reverseOrder.bind(this);
         this.getAllItems = this.getAllItems.bind(this);
 
-        this.test = this.test.bind(this);
     }
 
     componentDidMount(){
@@ -67,7 +66,6 @@ class TodoList extends React.Component{
     }
 
     async getAllItems(){
-        console.log("getAllItems");
         await axios.get(`http://todolistapi.eba-ikjufnsu.us-east-1.elasticbeanstalk.com/all`)
             .then(response =>{
                 this.setState({items:response.data})
@@ -96,9 +94,6 @@ class TodoList extends React.Component{
         this.getAllItems();
     }
 
-    async test(){
-        console.log('test');
-    }
 } 
 
 export default TodoList;
