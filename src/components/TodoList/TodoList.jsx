@@ -37,7 +37,7 @@ class TodoList extends React.Component{
                                 <h5>{task}</h5>
                             ))}
                         </div>
-                        <button onClick={this.deleteItem.bind(this, item.id)}>Delete</button>
+                        <button onClick={this.deleteItem.bind(this, item.id)} className='deleteButton'>Delete</button>
                     </div>
                 );
             });
@@ -57,7 +57,7 @@ class TodoList extends React.Component{
     }
     render(){
         return(
-            <div>
+            <div className='todoList'>
                 <AddComponent functionRefresh={this.getAllItems}/>
                 {this.renderSwitch()}
             </div>

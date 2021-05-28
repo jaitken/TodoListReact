@@ -2,5 +2,13 @@
     border: 1px solid grey;
     width: 500px;
     margin: auto;
+    border-radius: 10px;
+    padding:5px;
     text-align: left;
+}
+
+.deleteButton{
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
